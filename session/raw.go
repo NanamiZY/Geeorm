@@ -1,6 +1,7 @@
 package session
 
 import (
+	"Geeorm/dialect"
 	"Geeorm/log"
 	"database/sql"
 	"strings"
@@ -8,6 +9,7 @@ import (
 
 type Session struct {
 	db      *sql.DB
+	dialect dialect.Dialect
 	sql     strings.Builder
 	sqlVars []interface{}
 }
